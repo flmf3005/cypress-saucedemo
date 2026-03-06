@@ -6,7 +6,7 @@ describe("Login", () => {
   });
 
   it("deve fazer login com sucesso com credenciais válidas", () => {
-    LoginPage.login("standard_user", "secret_sauce");
+    LoginPage.login(Cypress.env("username"), Cypress.env("password"));
     cy.url().should("include", "/inventory");
   });
 
@@ -18,14 +18,14 @@ describe("Login", () => {
   });
 
   it("deve exibir erro ao deixar usuário em branco", () => {
-    LoginPage.login("", "secret_sauce");
+    LoginPage.login("", Cypress.env("password"));
     LoginPage.getErrorMessage()
       .should("be.visible")
       .and("contain", "Username is required");
   });
 
   it("deve exibir erro ao deixar senha em branco", () => {
-    LoginPage.login("standard_user", "");
+    LoginPage.login(Cypress.env("username"), "");
     LoginPage.getErrorMessage()
       .should("be.visible")
       .and("contain", "Password is required");

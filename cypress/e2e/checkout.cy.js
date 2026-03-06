@@ -6,7 +6,7 @@ import CheckoutPage from "../pages/CheckoutPage";
 describe("Carrinho e Checkout", () => {
   beforeEach(() => {
     LoginPage.visit();
-    LoginPage.login("standard_user", "secret_sauce");
+    LoginPage.login(Cypress.env("username"), Cypress.env("password"));
     cy.url().should("include", "/inventory");
   });
 
