@@ -62,7 +62,7 @@ cypress/
 ### Instalação
 
 ```bash
-git clone https://github.com/seu-usuario/cypress-saucedemo.git
+git clone https://github.com/flmf3005/cypress-saucedemo.git
 cd cypress-saucedemo
 npm install
 ```
