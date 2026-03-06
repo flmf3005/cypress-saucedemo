@@ -67,6 +67,23 @@ cd cypress-saucedemo
 npm install
 ```
 
+### Variáveis de Ambiente
+
+Copia o arquivo de exemplo e preenche com suas credenciais:
+
+```bash
+cp .env.example .env
+```
+
+Abre o `.env` e preenche:
+
+```
+CYPRESS_USERNAME=seu_usuario
+CYPRESS_PASSWORD=sua_senha
+```
+
+> As credenciais para o SauceDemo estão disponíveis em [saucedemo.com](https://www.saucedemo.com)
+
 ### Executar todos os testes
 
 ```bash
